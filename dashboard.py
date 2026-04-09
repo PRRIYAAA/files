@@ -18,15 +18,16 @@ st.markdown("""<style>
     --primary-dark: #3730A3;
     --accent: #7C3AED;
     --bg-main: #F8FAFC;
-    --glass: rgba(255, 255, 255, 0.72);
-    --border: rgba(226, 232, 240, 0.8);
-    --text-main: #1E293B;
-    --text-muted: #64748B;
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --glass: rgba(255, 255, 255, 0.95);
+    --border: rgba(226, 232, 240, 0.9);
+    --text-main: #050B15;
+    --text-muted: #475569;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
-html, body, [class*="css"] {
+html, body, [class*="css"], .stMarkdown, p, span, li {
     font-family: 'Outfit', sans-serif;
+    color: var(--text-main) !important;
 }
 
 .stApp {
@@ -71,6 +72,10 @@ section[data-testid="stSidebar"] {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%) !important;
     color: #FFFFFF !important;
     box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.stTabs [aria-selected="true"] * {
+    color: #FFFFFF !important;
 }
 
 /* Premium Card Styles */
